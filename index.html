@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>15 Game!</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/playingarea.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="header clearfix">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" class="active"><a href="#tabplay" data-toggle="tab">Play</a></li>
+                        <li role="presentation"><a href="#tabinstruction" data-toggle="tab">Instructions</a></li>
+                        <li role="presentation"><a href="#tabsolution" data-toggle="tab">Solution</a></li>
+                    </ul>
+                </nav>
+                <h3 class="text-muted">15 Game</h3>
+            </div>
+
+            <div class="tab-content clearfix">
+                <div class="tab-pane active" id="tabplay">
+                    <div class="alert alert-success solved">
+                        <strong>Success!</strong> You solved the puzzle!
+                    </div>
+                    <div class="playingcontainer">
+                        <button type="button" class="btn btn-primary" id="btn_scramble">Scramble</button>
+                        <button type="button" class="btn btn-primary" id="btn_reset">Reset</button>
+                        <div class="playingarea">
+                            <div class="playingarea_cell" data-pos="1.1">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="1.2">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="1.3">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="1.4">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="2.1">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="2.2">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="2.3">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="2.4">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="3.1">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="3.2">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="3.3">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="3.4">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="4.1">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="4.2">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="4.3">&nbsp;</div>
+                            <div class="playingarea_cell" data-pos="4.4">&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tabinstruction">
+                    <p>
+                        The objective of this game is to get the pieces back in their original configuration.
+                        Where all the pieces are in ascending order and the last square of the grid is empty.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="img/finish.png" style="width:100%;">
+                                <div class="caption">
+                                    <p>Target position</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The pieces can be slided to the empty space by clicking any of the adjacent pieces. This will move the piece to the empty square creating a new empty square.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="img/clickpre.png">
+                                <div class="caption">
+                                    <p>Click a stone to move</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="thumbnail">
+                                <img src="img/clickpost.png" style="width:100%;">
+                                <div class="caption">
+                                    <p>A new empty square appears</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Good luck!</p>
+                </div>
+                <div class="tab-pane" id="tabsolution">
+                    <p>
+                        The puzzle can be solved by executing the following steps:
+                    </p>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 1</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get 1,2 and 4 in the top row.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step1.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Align the first 3 pieces</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 2</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get the 3 piece underneath the 4 piece and make sure that there is an empty square next to it.<br/>
+                                    Now you can turn the 3 pieces in the corner clockwise to complete the first row.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step2.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Complete the first row</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 3</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get 5,6 and 8 in the 2nd row without moving the top row.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step3.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Align the next 3 pieces</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 4</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get the 7 piece underneath the 8 piece and make sure that there is an empty square next to it.<br/>
+                                    Now you can turn the 3 pieces clockwise to complete the second row.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step4.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Complete the second row</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 5</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get the 9 and 13 in the bottom row as shown in the picture. Now turn the pieces clockwise to complete the left column.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step5.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Complete the left column</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 6</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Get the 10 and 14 in the bottom row as shown in the picture. Now turn the pieces clockwise to complete the second column.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step6.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Complete the second column</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Step 7</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">Turn the bottom right 3 pieces until they are in the correct position to complete the puzzle.
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="thumbnail">
+                                        <img src="img/step7.png" style="width:100%;">
+                                        <div class="caption">
+                                            <p>Complete the puzzle</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/gameplay.js"></script>
+    </body>
+</html>

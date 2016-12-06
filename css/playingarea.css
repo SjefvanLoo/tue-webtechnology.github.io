@@ -1,0 +1,38 @@
+.tab-pane{
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.playingarea{
+    margin-top: 10px;
+    height: 80vh;
+    max-height: 80vw;
+    width: 80vh;
+    max-width: 80vw;
+    border: 30px solid black;
+    background-image: url(../img/felt.jpg);
+}
+.playingarea_cell {
+    float:left;
+    width: 25%;
+    height: 25%;
+    margin:0%;
+    overflow:hidden;
+}
+
+.playing-piece{
+    width:100%;
+    height:100%;
+    background-image: url(../img/background.jpg);
+    background-size: 300px;
+    border: #804200 5px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.number_img{
+    width:100%;
+    height:100%;
+}
+body{
+    font-family: Verdana,sans-serif;
+}
