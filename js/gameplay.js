@@ -2,14 +2,11 @@ $(document).ready(function(){
     $(".playingarea_cell").click(function(){
         clickCell(this);
     });
-    $("#btn_reset").click(function(){
-        reset();
-    });
     $("#btn_scramble").click(function(){
         scramble();
     });
-    //start of with a reset to fill all the squares
-    reset();
+    //start of with a scramble
+    scramble();
 });
 
 function clickCell(cell){
